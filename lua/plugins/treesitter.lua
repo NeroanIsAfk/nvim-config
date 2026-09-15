@@ -18,9 +18,9 @@ if (vim.fn.has('win32') == 1) then
 	vim.env.CC = 'gcc'
 end
 
-require('nvim-treesitter').install({ 'toml' })
+require('nvim-treesitter').install({ 'toml', 'javascript', 'typescript', 'tsx', "html", "css", "c", "cpp", "rust", "go" })
 
 vim.api.nvim_create_autocmd({"FileType"}, {
-	pattern = "toml",
+	pattern = {"toml", "javascript", "typescript", "javascriptreact", "typescriptreact", "html", "css", "c", "cpp", "rust", "go"},
 	callback = function(ev) vim.treesitter.start(ev.buf) end
 })

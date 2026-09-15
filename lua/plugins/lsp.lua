@@ -3,6 +3,12 @@ vim.pack.add {
 }
 
 vim.lsp.enable('lua_ls')
+vim.lsp.enable('tsc')
+vim.lsp.enable('html')
+vim.lsp.enable('cssls')
+vim.lsp.enable('clangd')
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('gopls')
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(ev)
